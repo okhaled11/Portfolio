@@ -34,7 +34,6 @@
   --outline-dark: hsl(264, 5%, 58%);
   --outline-variant-dark: hsl(264, 7%, 29%);
 
-
   /* <------------Typography------------------> */
 
   /* Font-family */
@@ -63,7 +62,6 @@
   --weight-regular: 400;
   --weight-medium: 500;
 
-
   /*<---------------- Others------------->*/
 
   /* Border-radius */
@@ -87,8 +85,7 @@
   --motion-easing-linear: cubic-bezier(0, 0, 1, 1);
 }
 
-[data-theme="light"] {
-
+[data-theme='light'] {
   color-scheme: light;
 
   --background: var(--background-light);
@@ -103,11 +100,9 @@
   --on-primary: var(--on-primary-light);
   --outline: var(--outline-light);
   --outline-variant: var(--outline-variant-light);
-
 }
 
-[data-theme="dark"] {
-
+[data-theme='dark'] {
   color-scheme: dark;
 
   --background: var(--background-dark);
@@ -122,13 +117,10 @@
   --on-primary: var(--on-primary-dark);
   --outline: var(--outline-dark);
   --outline-variant: var(--outline-variant-dark);
-
 }
 
-@media(prefers-reduced-motion: no-preference) {}
-
-
-
+@media (prefers-reduced-motion: no-preference) {
+}
 
 /*-----------------------------------*\
   #RESET
@@ -197,12 +189,9 @@ body {
   font-size: var(--body-large);
 }
 
-
 ::-webkit-scrollbar {
   width: 8px;
-
 }
-
 
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
@@ -219,7 +208,6 @@ body {
   left: 0;
   width: 100%;
   height: auto;
-
 }
 
 /*-----------------------------------*\
@@ -229,11 +217,7 @@ body {
   width: 1em;
   height: 1em;
   display: block;
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 :has(> .state-layer) {
@@ -271,7 +255,6 @@ body {
   height: 100%;
   /* aspect-ratio: var(--width) / var(--height); */
   background-color: transparent;
-
 }
 
 .img-cover {
@@ -284,7 +267,6 @@ body {
 
 .tab-content:not(.active) {
   display: none;
-
 }
 
 .section-title {
@@ -317,7 +299,7 @@ body {
   color: var(--on-primary);
   font-weight: var(--weight-medium);
   overflow: hidden;
-  --state-layer-bg: var(--on-primary)
+  --state-layer-bg: var(--on-primary);
 }
 
 .btn:hover:not(:focus) {
@@ -345,7 +327,7 @@ body {
   place-content: center;
   background-color: var(--surface);
   color: var(--on-surface-variant);
-  --state-layer-bg: var(--on-surface-variant)
+  --state-layer-bg: var(--on-surface-variant);
 }
 
 .tab-btn.active {
@@ -370,7 +352,6 @@ body {
   border-radius: 3px 3px 0 0;
   background-color: var(--primary);
   opacity: 0;
-
 }
 
 .tab-btn.active .tab-text::after {
@@ -450,6 +431,9 @@ body {
 
 .card-title {
   color: var(--on-surface);
+  & span {
+    visibility: hidden;
+  }
 }
 
 .card .img-cover {
@@ -467,7 +451,8 @@ body {
   box-shadow: inset 0 0 0 1px var(--outline);
   border-radius: 5px;
   outline: none;
-  transition: box-shadow var(--motion-duration-short-1) var(--motion-easing-linear);
+  transition: box-shadow var(--motion-duration-short-1)
+    var(--motion-easing-linear);
 }
 
 .textarea {
@@ -482,7 +467,6 @@ body {
 :where(.input-field, .textarea):focus {
   box-shadow: inset 0 0 0 2px var(--primary);
 }
-
 
 /*-----------------------------------*\
   #TYPOGRAPHY
@@ -514,7 +498,6 @@ body {
   font-size: var(--headline-large);
   font-weight: var(--weight-regular);
   line-height: 40px;
-
 }
 
 .headline-medium {
@@ -522,7 +505,6 @@ body {
   font-size: var(--headline-medium);
   font-weight: var(--weight-regular);
   line-height: 36px;
-
 }
 
 .headline-small {
@@ -530,7 +512,6 @@ body {
   font-size: var(--headline-small);
   font-weight: var(--weight-regular);
   line-height: 32px;
-
 }
 
 .title-large {
@@ -616,13 +597,13 @@ body {
   z-index: 4;
 }
 
-[data-theme="dark"] .logo .light,
-[data-theme="light"] .logo .dark {
+[data-theme='dark'] .logo .light,
+[data-theme='light'] .logo .dark {
   display: none;
 }
 
-[data-theme="dark"].logo .dark,
-[data-theme="light"].logo .light {
+[data-theme='dark'].logo .dark,
+[data-theme='light'].logo .light {
   display: block;
 }
 
@@ -633,16 +614,14 @@ body {
   overflow: hidden;
 }
 
-[data-theme="dark"] .theme-btn .dark,
-[data-theme="light"] .theme-btn .light {
+[data-theme='dark'] .theme-btn .dark,
+[data-theme='light'] .theme-btn .light {
   display: none;
 }
-
 
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
-
 
 .hero .container {
   display: grid;
@@ -655,9 +634,7 @@ body {
   width: 240px;
   border-radius: 50%;
   border: 3px solid var(--primary);
-
 }
-
 
 .hero-content {
   max-width: 500px;
@@ -717,7 +694,6 @@ body {
   gap: 4px;
 }
 
-
 /*-----------------------------------*\
   #PROJECT
 \*-----------------------------------*/
@@ -728,11 +704,9 @@ body {
   gap: 12px;
 }
 
-
 .project-list .card {
   box-shadow: var(--elevation-1);
   padding: 0;
-
 }
 
 .project-list .card:hover {
@@ -746,13 +720,10 @@ body {
   transition: var(--motion-easing-linear) var(--motion-duration-short-1);
 }
 
-
 .card:hover .img-cover {
   transform: scale(1.03);
   padding: 5;
 }
-
-
 
 /*-----------------------------------*\
   #RESUME
@@ -776,7 +747,7 @@ body {
   justify-content: center;
   gap: 5px;
   transition: 0.1s ease-in-out;
-  box-shadow: var(--elevation-1)
+  box-shadow: var(--elevation-1);
 }
 
 .resume-card .btn:hover {
@@ -817,12 +788,10 @@ body {
 
 .contact-tab {
   padding-block-end: 0;
-
 }
 
 .contact-tab .container {
   padding-block-end: 24px;
-
 }
 
 .contact-info,
@@ -892,17 +861,16 @@ body {
   box-shadow: var(--elevation-1);
 }
 
-
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .resume-card .btn {
     width: 100%;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .article {
     position: relative;
     display: grid;
@@ -922,14 +890,9 @@ body {
   .hero .container {
     grid-template: 0.2fr 1fr;
   }
-
-
-
-
 }
 
-@media (min-width:1200px) {
-
+@media (min-width: 1200px) {
   .container,
   .article {
     max-width: 1128px;
@@ -947,12 +910,10 @@ body {
     gap: 24px;
   }
 
-
   .wave {
     top: -300px;
   }
 }
-
 
 /*-----------------------------------*\
   #TEXT ANIMATION
