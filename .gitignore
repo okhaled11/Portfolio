@@ -1,5 +1,9 @@
-admin/admin.css
+# Exclude admin dashboard files
+admin/
 js/portfolio-loader.js
-admin/login.html
-admin/admin.js
-admin/dashboard.html
+
+# Exclude node modules if you add them later
+node_modules/
+
+# Exclude environment files (for security)
+.env
