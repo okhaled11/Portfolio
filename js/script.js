@@ -1,4 +1,13 @@
 
+// LOADER
+
+window.addEventListener('load', () => {
+    const loaderContainer = document.querySelector('.loader-container');
+    setTimeout(() => {
+        loaderContainer.classList.add('loader-hidden');
+    }, 3000); // Show loader for at least 1 second
+});
+
 //  LIGHT AND DARk MODE
 
 const themeBtn = document.querySelector("[data-theme-btn]");
@@ -18,6 +27,8 @@ const tabContents = document.querySelectorAll("[data-tab-content]");
 
 let lastActiveTab = document.querySelector("[data-tab-content].active") || tabContents[0];
 let lastActiveTabBtn = document.querySelector("[data-tab-btn].active") || tabBtns[0];
+
+
 
 tabBtns.forEach(btn => {
     btn.addEventListener("click", function () {
